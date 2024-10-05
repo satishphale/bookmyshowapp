@@ -1,9 +1,19 @@
 package com.bookmyshow.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
-public class Ticket {
+import java.io.Serializable;
+
+@Entity
+@Getter @Setter
+public class Ticket implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
     Event event;
