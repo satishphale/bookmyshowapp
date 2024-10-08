@@ -1,29 +1,30 @@
 package com.bookmyshow.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
+
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Entity
 @Getter @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Table(name = "users")
 public class User implements Serializable {
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @NotNull
+    @Column(name = "name", nullable = false)
     String name;
 
-    @NotNull
+    @Column(name = "password", nullable = false)
     String password;
 
-    @NotNull
+    @Column(name = "address", nullable = false)
     String address;
 
 }
