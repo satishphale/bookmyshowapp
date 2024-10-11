@@ -2,7 +2,7 @@
 This is backend app for bookmyshow. Developed in java spring-boot and mysql database.
 
 #### Prerequisites:
-Docker Desktop installed with kubernetes 
+Docker Desktop installed with kubernetes option enabled.
 
 ### Setup 
 #### Docker:
