@@ -21,4 +21,10 @@ public class UserServiceImp implements UserService {
         return  userRepository.findById(id).orElseThrow(() -> new ClassNotFoundException("user with id "+id+" not found."));
     }
 
+    @Override
+    public Long deleteUser(Long id) {
+        userRepository.deleteById(id);
+        return id;
+    }
+
 }

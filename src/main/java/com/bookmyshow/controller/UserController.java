@@ -26,6 +26,12 @@ public class UserController {
         return ResponseEntity.ok(savedUser);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
+        userService.deleteUser(id);
+        return ResponseEntity.ok("User deleted successfully");
+    }
+
     @ExceptionHandler(ClassNotFoundException.class)
     public ResponseEntity<String> handleException(ClassNotFoundException ex) {
         return new ResponseEntity<>("User not found. ",HttpStatus.NOT_FOUND);
