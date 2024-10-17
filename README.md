@@ -25,5 +25,7 @@ Docker Desktop installed with kubernetes option enabled.
 6. Once deployed, Kubernetes will expose your application via the LoadBalancer service.
 You can retrieve the external IP by running: **kubectl get svc**
 
+Status:
+ added apis for user and events
 
 &copy; satish phale
