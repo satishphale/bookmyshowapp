@@ -26,6 +26,6 @@ Docker Desktop installed with kubernetes option enabled.
 You can retrieve the external IP by running: **kubectl get svc**
 
 Status:
- added apis for user and events
+ added apis for user, events, search APIs
 
 &copy; satish phale
